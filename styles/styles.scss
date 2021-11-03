@@ -6,12 +6,39 @@ body{
 }
 
 mark{
+
     background-color: white;
+    }
+
+.run{
+    display: block;
+    width: fit-content;
+    animation: run-away ease-in-out 1s forwards infinite ;
+    
+    &:hover{
+        animation-play-state: paused;
+    }
+}
+
+@keyframes run-away {
+    0%{
+        transform: translateX(0%);
+    }
+
+    50%{
+        transform: translateX(20rem);
+    }
+
+    100%{
+        transform: translateX(0%);
+    }
 }
 
 a{
     text-decoration: none;
     color: #dcfdff;
+
+    &:hover{color: #000000;}
 }
 img{
     border-radius: 10%;
